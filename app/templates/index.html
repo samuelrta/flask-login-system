@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if current_user.is_authenticated %}
+<h1 class="title">
+  Olá {{ current_user.name }}.
+</h1>
+{% else %}
+<h1 class="title">
+  Olá Visitante.
+</h1>
+<h2 class="subtitle">
+  Realize o login ou cadastro para acessar a plataforma.
+</h2>
+{% endif %}
+{% endblock %}
